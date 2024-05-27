@@ -61,8 +61,8 @@ export class ProductImagesController {
 
   async delete(request: Request, response: Response) {
     const userId = request.user.id;
-    const productImagesIds = request.body.productImagesIds;
-
+    const productImagesIds = request.body.images;
+    console.log('id da imagem: '+productImagesIds);
     const diskStorage = new DiskStorage();
 
     if (productImagesIds.length === 0) {
